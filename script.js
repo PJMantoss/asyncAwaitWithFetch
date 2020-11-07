@@ -1,4 +1,4 @@
-const  getPosts = async => {
+async function getPosts(){
     const postsPromise = await fetch("https://jsonplaceholder.typicode.com/posts");
 
 //error handling
@@ -15,13 +15,15 @@ const  getPosts = async => {
                 <h3>${title}</h3>
                 <p>${body}</p>
             </div>
-        `
+        `;
+
+        document.body.innerHTML = html;
     })
     }else{
         console.error(`Error: ${postsPromise.status}`)
     }
 
-    document.body.innerHTML = html;
+    
 };
 
 getPosts();
