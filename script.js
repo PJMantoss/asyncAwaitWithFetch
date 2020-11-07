@@ -1,3 +1,5 @@
+// A fetch API call within an Async/Await function
+
 async function getPosts(){
     const postsPromise = await fetch("https://jsonplaceholder.typicode.com/posts");
 
