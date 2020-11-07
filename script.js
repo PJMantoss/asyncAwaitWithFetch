@@ -1,5 +1,5 @@
 const  getPosts = async => {
-    const postsPromise = await fetch("");
+    const postsPromise = await fetch("https://jsonplaceholder.typicode.com/posts");
 
 //error handling
     if(postsPromise.ok){
